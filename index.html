@@ -1,22 +1,432 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Project: Marquette White's pdates coming soon webpage</title>
-  </head>
-  <body>
-    <h1>Updates Coming Soon</h1>
-    <p>...updates to website coming soon!</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookies and Privacy in Web Development</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Cookies and Privacy in Web Development</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Abstract</h2>
+      <p>
+        This website explores how cookies support web functionality while
+        raising privacy concerns. It explains how cookies work, their technical
+        attributes, and how regulations like GDPR affect their use.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Terms</h2>
+      <ul>
+        <li>Cookies</li>
+        <li>Privacy</li>
+        <li>GDPR</li>
+        <li>SameSite</li>
+        <li>HttpOnly</li>
+        <li>User Consent</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Table of Contents</h2>
+      <ol>
+        <li><a href="cookies.html">Understanding Cookies</a></li>
+        <li><a href="privacy.html">Cookies and Privacy</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html">About the Author</a></li>
+        <li><a href="references.html">References and Resources</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      This site is a class project for IT 3203 – Web Development |
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">Course Site</a>
+    </p>
+  </footer>
+</body>
 </html>
-it3203_privacy_site/
-│
-├── index.html
-├── cookies.html
-├── privacy.html
-├── concepts.html
-├── about.html
-├── references.html
-│
-└── css/
-    └── styles.css
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding Cookies</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Understanding Cookies</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>What Are Cookies?</h2>
+    <p>
+      Cookies are small text files stored on a user’s computer by a web browser.
+      They help websites remember user preferences, session data, and login
+      information. Cookies make modern web experiences seamless but also raise
+      questions about data privacy.
+    </p>
+
+    <h3>How Cookies Work</h3>
+    <p>
+      When a user visits a website, the server sends a cookie to the browser.
+      The browser stores it and sends it back with future requests to the same
+      site.
+    </p>
+
+    <pre><code>document.cookie = "username=Marq; Secure; SameSite=Strict";</code></pre>
+
+    <h3>Common Cookie Attributes</h3>
+    <table>
+      <tr>
+        <th>Attribute</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>Secure</td>
+        <td>Restricts cookies to HTTPS connections only.</td>
+        <td>Secure</td>
+      </tr>
+      <tr>
+        <td>HttpOnly</td>
+        <td>Prevents client-side scripts from accessing cookies.</td>
+        <td>HttpOnly</td>
+      </tr>
+      <tr>
+        <td>SameSite</td>
+        <td>Controls cross-site cookie sharing.</td>
+        <td>SameSite=Strict</td>
+      </tr>
+    </table>
+
+    <figure>
+      <img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="Cookie flow illustration" width="200" />
+      <figcaption>Example: Cookie flow between browser and server</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    <p>
+      This site is a class project for IT 3203 – Web Development |
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">Course Site</a>
+    </p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookies and Privacy</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Cookies and Privacy</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Why Privacy Matters</h2>
+    <p>
+      While cookies are essential for personalization and analytics, they also
+      track user behavior across websites. This creates privacy risks if users
+      are unaware of what data is collected or how it is used.
+    </p>
+
+    <h3>Legal Frameworks</h3>
+    <ul>
+      <li><strong>GDPR</strong> – Requires user consent before storing cookies.</li>
+      <li><strong>CCPA</strong> – Gives users the right to opt out of data sale.</li>
+      <li><strong>ePrivacy Directive</strong> – Regulates cookie usage in the EU.</li>
+    </ul>
+
+    <h3>Best Practices</h3>
+    <ol>
+      <li>Display clear cookie consent banners.</li>
+      <li>Use only essential cookies unless consented.</li>
+      <li>Offer privacy settings and opt-out controls.</li>
+    </ol>
+  </main>
+
+  <footer>
+    <p>
+      This site is a class project for IT 3203 – Web Development |
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">Course Site</a>
+    </p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Key Concepts</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Key Concepts</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <ul>
+      <li><strong>Cookie:</strong> Small text file that stores user data for websites.</li>
+      <li><strong>Session Cookie:</strong> Expires when the browser closes.</li>
+      <li><strong>Persistent Cookie:</strong> Stored until its expiration date.</li>
+      <li><strong>HttpOnly:</strong> Cookie flag preventing JavaScript access.</li>
+      <li><strong>SameSite:</strong> Restricts cross-site requests to prevent CSRF.</li>
+      <li><strong>GDPR:</strong> European privacy regulation requiring consent.</li>
+      <li><strong>Consent Banner:</strong> UI element requesting cookie permission.</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>
+      This site is a class project for IT 3203 – Web Development |
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">Course Site</a>
+    </p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Author</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>About the Author</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p><strong>Author:</strong> Marquette White</p>
+    <p><strong>Course:</strong> IT 3203 – Web Development</p>
+    <p>
+      I am a web development student passionate about front-end design and user
+      privacy. This project demonstrates my understanding of HTML, CSS, and
+      modern web design principles.
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      This site is a class project for IT 3203 – Web Development |
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">Course Site</a>
+    </p>
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>References & Resources</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>References and Resources</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <ul>
+      <li>
+        Mozilla Developer Network (MDN) – 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">HTTP Cookies</a>
+      </li>
+      <li>
+        European Commission – 
+        <a href="https://commission.europa.eu/law/law-topic/data-protection_en" target="_blank">Data Protection (GDPR)</a>
+      </li>
+      <li>
+        Wikipedia – 
+        <a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank">HTTP Cookie</a>
+      </li>
+      <li>
+        W3C – 
+        <a href="https://www.w3.org/TR/webstorage/" target="_blank">Web Storage Specification</a>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>
+      This site is a class project for IT 3203 – Web Development |
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank">Course Site</a>
+    </p>
+  </footer>
+</body>
+</html>
+
+/* ========== Base Layout ========== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #0a3d62;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+/* ========== Navigation ========== */
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-menu li {
+  margin: 5px 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ffd32a;
+}
+
+/* ========== Elements ========== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+th {
+  background-color: #eee;
+}
+
+img {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+/* ========== Example Selectors ========== */
+p {
+  line-height: 1.6;
+}
+
+.highlight {
+  background-color: #ffeaa7;
+  padding: 5px;
+}
+
+#footer-note {
+  color: #555;
+  font-style: italic;
+}
+

@@ -436,3 +436,131 @@ p {
   font-style: italic;
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies & Privacy Quiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #fdfdfd; }
+    header { background-color: #0a3d62; color: white; padding: 1em; text-align: center; }
+    nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; }
+    nav a { color: white; text-decoration: none; }
+    nav a:hover { color: #ffd32a; }
+    main { max-width: 800px; margin: 20px auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    h2 { color: #0a3d62; }
+    .result { margin-top: 20px; padding: 15px; border-radius: 8px; }
+    .correct { background-color: #d4edda; color: #155724; }
+    .incorrect { background-color: #f8d7da; color: #721c24; }
+    button { padding: 10px 20px; margin-top: 15px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #0a3d62; color: white; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cookies & Privacy Quiz</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="quizForm">
+      <h2>1. Fill in the blank</h2>
+      <p>Cookies are small text files stored on a user’s <input type="text" name="q1"></p>
+
+      <h2>2. Multiple Choice</h2>
+      <p>Which cookie attribute prevents JavaScript from accessing the cookie?</p>
+      <label><input type="radio" name="q2" value="a"> Secure</label><br>
+      <label><input type="radio" name="q2" value="b"> HttpOnly</label><br>
+      <label><input type="radio" name="q2" value="c"> SameSite</label><br>
+      <label><input type="radio" name="q2" value="d"> Persistent</label><br>
+
+      <p>Which regulation requires user consent before storing cookies in the EU?</p>
+      <label><input type="radio" name="q3" value="a"> CCPA</label><br>
+      <label><input type="radio" name="q3" value="b"> GDPR</label><br>
+      <label><input type="radio" name="q3" value="c"> HIPAA</label><br>
+      <label><input type="radio" name="q3" value="d"> ePrivacy Directive</label><br>
+
+      <p>Persistent cookies:</p>
+      <label><input type="radio" name="q4" value="a"> Expire when the browser closes</label><br>
+      <label><input type="radio" name="q4" value="b"> Are deleted automatically after a day</label><br>
+      <label><input type="radio" name="q4" value="c"> Are stored until their expiration date</label><br>
+      <label><input type="radio" name="q4" value="d"> Cannot be read by the server</label><br>
+
+      <h2>3. Multi-Select</h2>
+      <p>Select all the best practices for cookies and privacy:</p>
+      <label><input type="checkbox" name="q5" value="a"> Display clear cookie consent banners</label><br>
+      <label><input type="checkbox" name="q5" value="b"> Track all user activity without notice</label><br>
+      <label><input type="checkbox" name="q5" value="c"> Use only essential cookies unless consented</label><br>
+      <label><input type="checkbox" name="q5" value="d"> Offer privacy settings and opt-out controls</label><br>
+
+      <button type="button" onclick="checkQuiz()">Submit</button>
+      <button type="button" onclick="resetQuiz()">Reset</button>
+    </form>
+
+    <div id="results"></div>
+  </main>
+
+  <script>
+    function checkQuiz() {
+      const resultsDiv = document.getElementById('results');
+      let score = 0;
+      let maxScore = 5;
+      let resultHTML = '';
+
+      // Q1
+      const q1 = document.forms['quizForm']['q1'].value.trim().toLowerCase();
+      if(q1 === 'computer') { score++; resultHTML += '<p class="correct">Q1: Correct</p>'; }
+      else { resultHTML += '<p class="incorrect">Q1: Incorrect. Correct answer: computer</p>'; }
+
+      // Q2
+      const q2 = document.forms['quizForm']['q2'].value;
+      if(q2 === 'b') { score++; resultHTML += '<p class="correct">Q2: Correct</p>'; }
+      else { resultHTML += '<p class="incorrect">Q2: Incorrect. Correct answer: HttpOnly</p>'; }
+
+      // Q3
+      const q3 = document.forms['quizForm']['q3'].value;
+      if(q3 === 'b') { score++; resultHTML += '<p class="correct">Q3: Correct</p>'; }
+      else { resultHTML += '<p class="incorrect">Q3: Incorrect. Correct answer: GDPR</p>'; }
+
+      // Q4
+      const q4 = document.forms['quizForm']['q4'].value;
+      if(q4 === 'c') { score++; resultHTML += '<p class="correct">Q4: Correct</p>'; }
+      else { resultHTML += '<p class="incorrect">Q4: Incorrect. Correct answer: Are stored until their expiration date</p>'; }
+
+      // Q5
+      const q5Elems = document.forms['quizForm']['q5'];
+      const selected = [];
+      for(let i=0; i<q5Elems.length; i++){
+        if(q5Elems[i].checked) selected.push(q5Elems[i].value);
+      }
+      const correctQ5 = ['a','c','d'];
+      if(selected.length === correctQ5.length && selected.every(v => correctQ5.includes(v))) { score++; resultHTML += '<p class="correct">Q5: Correct</p>'; }
+      else { resultHTML += '<p class="incorrect">Q5: Incorrect. Correct answers: Display clear cookie consent banners, Use only essential cookies unless consented, Offer privacy settings and opt-out controls</p>'; }
+
+      // Overall Result
+      const passFail = score >= 3 ? 'Pass' : 'Fail';
+      resultHTML = `<div class="result"><h3>Overall Result: ${passFail}</h3><p>Score: ${score} / ${maxScore}</p></div>` + resultHTML;
+
+      resultsDiv.innerHTML = resultHTML;
+    }
+
+    function resetQuiz() {
+      document.getElementById('quizForm').reset();
+      document.getElementById('results').innerHTML = '';
+    }
+  </script>
+</body>
+</html>
+
